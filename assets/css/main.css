@@ -1,0 +1,548 @@
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+@font-face {
+  font-family: "SFUIDisplay-Regular";
+  src: url("../fonts/SF-UI-Display-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/SF-UI-Display-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/SF-UI-Display-Regular.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/SF-UI-Display-Regular.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/SF-UI-Display-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/SF-UI-Display-Regular.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/SF-UI-Display-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BhagirathiMJ";
+  src: url("../fonts/BhagirathiMJ.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/BhagirathiMJ.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/BhagirathiMJ.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/BhagirathiMJ.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/BhagirathiMJ.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/BhagirathiMJ.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/BhagirathiMJ.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BhagirathiMJ-Bold";
+  src: url("../fonts/BhagirathiMJBold/BhagirathiMJBold.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/BhagirathiMJBold/BhagirathiMJBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/BhagirathiMJBold/BhagirathiMJBold.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/BhagirathiMJBold/BhagirathiMJBold.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/BhagirathiMJBold/BhagirathiMJBold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/BhagirathiMJBold/BhagirathiMJBold.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/BhagirathiMJBold/BhagirathiMJBold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SutonnyMJ-Bold";
+  src: url("../fonts/SutonnyMJ-Bold/SutonnyMJ-Bold.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/SutonnyMJ-Bold/SutonnyMJ-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/SutonnyMJ-Bold/SutonnyMJ-Bold.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/SutonnyMJ-Bold/SutonnyMJ-Bold.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/SutonnyMJ-Bold/SutonnyMJ-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/SutonnyMJ-Bold/SutonnyMJ-Bold.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/SutonnyMJ-Bold/SutonnyMJ-Bold.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SutonnyOMJ";
+  src: url("../fonts/SutonnyOMJ/SutonnyOMJ.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/SutonnyOMJ/SutonnyOMJ.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/SutonnyOMJ/SutonnyOMJ.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/SutonnyOMJ/SutonnyOMJ.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/SutonnyOMJ/SutonnyOMJ.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/SutonnyOMJ/SutonnyOMJ.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/SutonnyOMJ/SutonnyOMJ.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+
+}
+body {
+  margin: 0;
+  font-family: 'SutonnyOMJ', sans-serif;
+  font-size: 14px;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ *  
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ *  
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+a,
+a:hover,
+a:visited{
+  color: #000;
+  text-decoration: none;
+  outline: 0;
+}
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * 
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+
+img{
+  max-width: 100%;
+}
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+ 
+ p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+ }
+
+main.main-body {
+    display: flex;
+    width: 100%;
+}
+
+.login-body-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image:url(../img/Main-BG.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #2b995e;
+
+  /* background: #610BAE; */
+}
+.login-inner{
+  width: 100%;
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 60px;
+  max-height: 650px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.login-main-content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background:url(../img/second-BG.png);
+  background-size: 100% 100%;
+}
+.login-main-content-left{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+  background-image: url(../img/third-BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -2rem;
+  background-position-y: 0rem;
+}
+  /* background: transparent; */
+
+.login-main-content-left img {
+  max-width: 160px;
+  margin-bottom: 30px;
+}
+.login-main-content-right{
+  background: transparent;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.login-main-content-right-innner {
+    padding: 50px;
+    border-radius: 10px;
+    background-image: url(../img/fourth-BG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: #7946c7de; */
+}
+.language-select-btn-secion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.dontAccount{
+  padding-top: 1rem;
+  color: rgb(105, 100, 100);
+}
+.dontAccount span{
+  color: #085f31;
+}
+
+.language-select-btn {
+  width: auto;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  background: #ffffff;
+  font-size: 14px;
+  color: #4d4d4d;
+  line-height: normal;
+  padding: 5px 10px;
+  margin: 0;
+}
+.language-select-btn.right {
+  border-radius: 0px 5px 5px 0px;
+}
+.language-select-btn:focus{
+  outline: none;
+}
+
+.language-select-btn.selected {
+  background: #009444;
+  color: #ffffff;
+}
+
+.login-main-content-left h4 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #009444;
+  margin-bottom: 10px;
+}
+
+.login-main-content-left h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+.form-main-title h1 {
+  color: #554f4f;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input.form-input-box {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  height: 45px;
+  margin: 10px 0px;
+  padding: 0px 10px 0px 60px;
+}
+input.form-input-box:focus {
+  box-shadow: 0px 0px 20px #f1f1f1;
+  outline: none;
+}
+input.form-input-box::-webkit-input-placeholder{
+  color: #000000;
+}
+input.form-input-box:-ms-input-placeholder{
+  color: #000000;
+}
+input.form-input-box::placeholder {
+  color: #000000;
+}
+
+.input-checkbox {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: left;
+  margin: 16px 0px;
+  color: #B3B3B3;
+  font-size: 14px;
+}
+
+.input-checkbox label {
+  margin: 0;
+  cursor: pointer;
+  color: #c1c1c1;
+}
+.sqr-checkbox {
+  position: relative;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.sqr-checkbox label {
+  background-color: #f7f6f5;
+  cursor: pointer;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+  border: 1px solid rgb(8, 5, 5);
+}
+
+.sqr-checkbox label:after {
+  border: 2px solid #ffffff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 5px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.sqr-checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+.sqr-checkbox input[type="checkbox"]:checked + label {
+    background: #009444;
+}
+.sqr-checkbox input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.submit-box {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.submit-btn {
+  width: 100%;
+  border: 0;
+  border-radius: 25px;
+  background: #009444;
+  padding: 0;
+  font-size: 16px;
+  line-height: 40px;
+  height: 40px;
+  color: #ededed;
+}
+
+button.submit-btn:focus {
+  outline: none;
+}
+
+.submit-box .forgot-pass{
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ec2227;
+}
+
+.create-account-btn-sec {
+  margin-top: 25px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.create-account-btn-sec p a {
+  color: #009444;
+}
+
+.copyright-sec {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.copyright-sec p {
+    color: #160e0e;
+    font-size: 16px;
+}
+.copyright-sec_secondpart{
+  padding-left: 2rem;
+}
+
+.form-input-single-box-outer img {
+    position: absolute;
+    z-index: 111;
+    top: 47%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+}
+
+.form-input-single-box-outer {
+    position: relative;
+}
+
+
+@media( max-width: 991px ){
+  .login-main-content-left {
+    width: 50%; 
+    padding: 30px;
+  }
+  .login-main-content-right{
+    width: 50%;
+    padding: 30px;
+  }
+  .login-main-content-left h4{
+    font-size: 16px;
+  }
+  .login-main-content-left h2{
+    font-size: 25px;
+  }
+}
+
+
+@media( max-width: 767px ){
+  .login-body-wrapper{
+    height: 100%;
+    position: relative;
+  }
+  .login-inner{
+    margin: 0;
+    height: 100%;
+    max-height: none;
+  }
+  .login-main-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background: #ffffff;
+  }
+
+  .login-main-content-left{
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .login-main-content-right{
+    width: 100%;
+  }
+.login-main-content-right-innner {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.form-main-title h1 {
+    margin: 16px 0px;
+    font-size: 24px;
+}
+
+input.form-input-box {
+    margin: 7px 0px;
+    height: 40px;
+}
+.input-checkbox {
+    margin: 10px 0px;
+}
+.sqr-checkbox{
+  margin-right: 5px;
+}
+.sqr-checkbox label{
+  height: 15px;
+  width: 15px;
+}
+.input-checkbox label{
+  font-size: 10px;
+}
+.submit-box {
+    margin: 13px 0px 0;
+}
+.submit-box .forgot-pass {
+    font-size: 10px;
+}
+button.submit-btn{
+  width: 80%;
+}
+a.forgot-pass {
+    margin: 10px 0px 0px;
+}
+.create-account-btn-sec{
+  font-size: 10px;
+}
+.copyright-sec {
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    bottom: 10px;
+    padding: 0px 50px;
+}
+.copyright-sec p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
